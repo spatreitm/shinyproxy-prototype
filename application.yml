@@ -20,8 +20,8 @@ proxy:
     container-image: ghcr.io/xingyaoc/shiny_app_example:latest
     container-network: sp-example-net
   - id: 02_app
-    container-cmd: ["R", "-q", "-e", "shiny::runApp('/root/shiny_app_example_2')"]
-    container-image: ghcr.io/xingyaoc/shiny_app_example_2:latest
+    container-cmd: ["R", "-q", "-e", "shiny::runApp('/root/shiny_app_example2')"]
+    container-image: ghcr.io/xingyaoc/shiny_app_example2:latest
     container-network: sp-example-net
 
 logging:
