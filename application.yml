@@ -13,14 +13,14 @@ proxy:
   docker:
       internal-networking: true
   specs:
-  - id: 01_hello
+  - id: 01_app
     display-name: Hello Application
     description: Application which demonstrates the basics of a Shiny app
-    container-cmd: ["R", "-e", "shinyproxy::run_01_hello()"]
+    container-cmd: ["R", "-q", "-e", "shiny::runApp('/root/shiny_app_example')"]
     container-image: ghcr.io/xingyaoc/shiny_app_example:latest
     container-network: sp-example-net
-  - id: 06_tabsets
-    container-cmd: ["R", "-e", "shinyproxy::run_06_tabsets()"]
+  - id: 02_app
+    container-cmd: ["R", "-q", "-e", "shiny::runApp('/root/shiny_app_example_2')"]
     container-image: ghcr.io/xingyaoc/shiny_app_example_2:latest
     container-network: sp-example-net
 
