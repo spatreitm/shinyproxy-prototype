@@ -33,5 +33,5 @@ jobs:
 
     - name: Build the Shinyproxy prototype Docker image
       run: |
-        docker build . --tag ghcr.io/xingyaoc/shinyproxy_proto:latest
-        docker push ghcr.io/xingyaoc/shinyproxy_proto:latest
+        docker build . --tag ghcr.io/spatreitm/shinyproxy_proto:latest
+        docker push ghcr.io/spatreitm/shinyproxy_proto:latest
