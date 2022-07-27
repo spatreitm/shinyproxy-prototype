@@ -27,3 +27,4 @@ Note: by adding the -d option to the command (just after docker run), the Docker
 ```
 sudo docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --group-add $(getent group docker | cut -d: -f3) --net sp-example-net -p 8080:8080 ghcr.io/spatreitm/shinyproxy_proto:latest
 ```
+test
