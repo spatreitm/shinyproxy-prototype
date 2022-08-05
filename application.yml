@@ -14,14 +14,20 @@ proxy:
       internal-networking: true
   specs:
   - id: 01_app
-    display-name: Hello Application
+    display-name: Euler Application
     description: Application which demonstrates the basics of a Shiny app
     container-cmd: ["R", "-q", "-e", "shiny::runApp('/root/shiny_app_example')"]
     container-image: ghcr.io/xingyaoc/shiny_app_example:latest
     container-network: sp-example-net
   - id: 02_app
+    display-name: Copy of Euler Application
     container-cmd: ["R", "-q", "-e", "shiny::runApp('/root/shiny_app_example2')"]
     container-image: ghcr.io/xingyaoc/shiny_app_example2:latest
+    container-network: sp-example-net
+ - id: 03_app
+    display-name: Chip Invasion
+    container-cmd: ["R", "-q", "-e", "shiny::runApp('/root/chip_invasion')"]
+    container-image: ghcr.io/eitm-org/chip_invasion:latest
     container-network: sp-example-net
 
 logging:
